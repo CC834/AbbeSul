@@ -1,5 +1,7 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
+import ContentSection from './components/ContentSection'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -8,27 +10,12 @@ function App() {
 
       <main>
         <Hero />
-
-        <section className="container placeholder-section" id="projects">
-          <h2>Projects</h2>
-        </section>
-
-        <section className="container placeholder-section" id="about">
-          <h2>About</h2>
-        </section>
-
-        <section className="container placeholder-section" id="skills">
-          <h2>Skills</h2>
-        </section>
-
-        <section className="container placeholder-section" id="contact">
-          <h2>Contact</h2>
-        </section>
+        <ContentSection id="projects" title="Projects" />
+        <ContentSection id="experience" title="Experience" />
+        <ContentSection id="contact" title="Contact" />
       </main>
 
-      <footer className="site-footer">
-        <div className="container">Footer</div>
-      </footer>
+      <Footer />
     </>
   )
 }
