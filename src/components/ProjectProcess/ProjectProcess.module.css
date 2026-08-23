@@ -1,0 +1,121 @@
+.process {
+  margin: 0 1.5rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.featured {
+  grid-column: 1 / -1;
+}
+
+.trigger {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0 0;
+  border: 0;
+  color: var(--text);
+  background: transparent;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.indicator {
+  position: relative;
+  width: 0.8rem;
+  height: 0.8rem;
+  flex: 0 0 auto;
+}
+
+.indicator::before,
+.indicator::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.8rem;
+  height: 1px;
+  content: '';
+  background: var(--accent);
+  transform: translate(-50%, -50%);
+  transition: transform 260ms ease;
+}
+
+.indicator::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.process[data-open='true'] .indicator::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease;
+}
+
+.process[data-open='true'] .reveal {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.revealClip {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 0 0.15rem;
+  transform: translateY(-0.35rem);
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.process[data-open='true'] .content {
+  transform: translateY(0);
+}
+
+.featured .content {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.content div {
+  padding-left: 0.8rem;
+  border-left: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+.content h4 {
+  margin: 0 0 0.3rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .featured .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .indicator::after,
+  .reveal,
+  .content {
+    transition: none;
+  }
+}

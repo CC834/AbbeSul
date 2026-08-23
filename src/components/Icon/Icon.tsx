@@ -2,8 +2,8 @@ import type { ReactNode, SVGProps } from 'react'
 
 export type IconName =
   | 'chevron'
+  | 'document'
   | 'folder'
-  | 'ghost'
   | 'message'
   | 'moon'
   | 'sun'
@@ -19,10 +19,10 @@ const paths: Record<IconName, ReactNode> = {
       <path d="M3.5 6.5v9a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-11a2 2 0 0 0-2 2" />
     </>
   ),
-  ghost: (
+  document: (
     <>
-      <path d="M4.5 17.5V9a6.5 6.5 0 0 1 13 0v8.5l-2.6-1.7-2.1 1.7-2.3-1.7-2.2 1.7-1.9-1.7-1.9 1.7Z" />
-      <path d="M8 9h.01M14 9h.01" />
+      <path d="M6 2.75h6.5L17 7.25v12H6a2 2 0 0 1-2-2V4.75a2 2 0 0 1 2-2Z" />
+      <path d="M12.5 2.75v4.5H17M8 11h5M8 14.5h5" />
     </>
   ),
   message: (

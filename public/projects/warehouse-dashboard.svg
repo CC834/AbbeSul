@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">Warehouse forecasting dashboard mockup</title>
+  <desc id="description">A stylized dashboard with forecast statistics, a line chart, and planning cards.</desc>
+  <rect width="1200" height="675" fill="#e9eddf"/>
+  <rect x="42" y="38" width="1116" height="599" rx="24" fill="#f8f8f5" stroke="#323532" stroke-width="3"/>
+  <circle cx="81" cy="77" r="8" fill="#efc3c9"/>
+  <circle cx="108" cy="77" r="8" fill="#c8d89c"/>
+  <circle cx="135" cy="77" r="8" fill="#b9d6df"/>
+  <path d="M42 113h1116" stroke="#d8dad4" stroke-width="3"/>
+  <rect x="75" y="151" width="210" height="445" rx="15" fill="#333633"/>
+  <rect x="104" y="188" width="114" height="12" rx="6" fill="#f8f8f5" opacity=".92"/>
+  <rect x="104" y="235" width="142" height="10" rx="5" fill="#f8f8f5" opacity=".35"/>
+  <rect x="104" y="274" width="128" height="10" rx="5" fill="#f8f8f5" opacity=".35"/>
+  <rect x="104" y="313" width="151" height="10" rx="5" fill="#f8f8f5" opacity=".35"/>
+  <rect x="104" y="352" width="96" height="10" rx="5" fill="#f8f8f5" opacity=".35"/>
+  <rect x="104" y="531" width="151" height="36" rx="10" fill="#c8d89c"/>
+  <rect x="322" y="151" width="250" height="112" rx="15" fill="#f1dadd"/>
+  <rect x="350" y="180" width="90" height="10" rx="5" fill="#565856" opacity=".55"/>
+  <rect x="350" y="211" width="132" height="23" rx="5" fill="#333633"/>
+  <rect x="594" y="151" width="250" height="112" rx="15" fill="#dde8c5"/>
+  <rect x="622" y="180" width="104" height="10" rx="5" fill="#565856" opacity=".55"/>
+  <rect x="622" y="211" width="117" height="23" rx="5" fill="#333633"/>
+  <rect x="866" y="151" width="259" height="112" rx="15" fill="#dcebef"/>
+  <rect x="894" y="180" width="84" height="10" rx="5" fill="#565856" opacity=".55"/>
+  <rect x="894" y="211" width="144" height="23" rx="5" fill="#333633"/>
+  <rect x="322" y="289" width="803" height="307" rx="15" fill="#fff" stroke="#dcddd8" stroke-width="2"/>
+  <path d="M365 540h716M365 478h716M365 416h716M365 354h716" stroke="#e7e8e3" stroke-width="2"/>
+  <path d="M377 511c80-12 111-87 188-73 77 15 115 64 190 26 76-38 98-110 176-96 78 13 102 79 159 55" fill="none" stroke="#6e8150" stroke-linecap="round" stroke-width="10"/>
+  <path d="M377 511c80-12 111-87 188-73 77 15 115 64 190 26 76-38 98-110 176-96 78 13 102 79 159 55v117H377Z" fill="#c8d89c" opacity=".28"/>
+  <circle cx="565" cy="438" r="10" fill="#f8f8f5" stroke="#6e8150" stroke-width="7"/>
+  <circle cx="931" cy="368" r="10" fill="#f8f8f5" stroke="#6e8150" stroke-width="7"/>
+</svg>

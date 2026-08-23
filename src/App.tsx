@@ -2,6 +2,7 @@ import ContentSection from './components/ContentSection/ContentSection'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
+import Projects from './components/Projects/Projects'
 
 function App() {
   return (
@@ -10,8 +11,8 @@ function App() {
 
       <main>
         <Hero />
-        <ContentSection id="projects" title="Projects" />
-        <ContentSection id="experience" title="Experience" />
+        <Projects />
+        <ContentSection id="cv" title="CV" />
         <ContentSection id="contact" title="Contact" />
       </main>
 

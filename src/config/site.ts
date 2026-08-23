@@ -15,7 +15,7 @@ export const siteConfig = {
 
   navigation: [
     { label: 'projects', href: '#projects', icon: 'folder' },
-    { label: 'experience', href: '#experience', icon: 'ghost' },
+    { label: 'cv', href: '#cv', icon: 'document' },
     { label: 'contact', href: '#contact', icon: 'message' },
   ],
 } as const
