@@ -1,0 +1,19 @@
+.siteFooter {
+  display: flex;
+  width: min(45.5rem, calc(100% - 3rem));
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: auto;
+  padding-block: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.siteFooter p {
+  margin: 0;
+}
+
+.siteFooter a:hover {
+  color: var(--text);
+}

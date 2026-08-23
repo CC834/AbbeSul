@@ -1,0 +1,14 @@
+.contentSection {
+  width: min(45.5rem, calc(100% - 3rem));
+  min-height: 55svh;
+  margin-inline: auto;
+  padding-block: 6rem;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 7rem;
+}
+
+.contentSection h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: -0.055em;
+}

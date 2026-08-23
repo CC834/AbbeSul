@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import styles from './ContentSection.module.css'
 
 type ContentSectionProps = {
   children?: ReactNode
@@ -8,7 +9,11 @@ type ContentSectionProps = {
 
 function ContentSection({ children, id, title }: ContentSectionProps) {
   return (
-    <section className="content-section" id={id} aria-labelledby={`${id}-title`}>
+    <section
+      className={styles.contentSection}
+      id={id}
+      aria-labelledby={`${id}-title`}
+    >
       <h2 id={`${id}-title`}>{title}</h2>
       {children}
     </section>

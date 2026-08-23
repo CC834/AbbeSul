@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import { siteConfig } from '../config/site'
-import Icon, { type IconName } from './Icon'
+import { siteConfig } from '../../config/site'
+import Icon, { type IconName } from '../Icon/Icon'
+import styles from './Header.module.css'
 
 const socialLinks = Object.entries(siteConfig.socials).filter(
   ([, href]) => href.length > 0,
@@ -27,36 +28,41 @@ function Header() {
   }, [])
 
   return (
-    <header className="site-header">
-      <div className="header-content">
-        <nav className="navigation-shell" aria-label="Primary navigation">
-          <ul className="navigation">
+    <header className={styles.siteHeader}>
+      <div className={styles.headerContent}>
+        <nav className={styles.navigationShell} aria-label="Primary navigation">
+          <ul className={styles.navigation}>
             {siteConfig.navigation.map((item) => (
               <li key={item.href}>
-                <a href={item.href}>
+                <a className={styles.navLink} href={item.href}>
                   <Icon name={item.icon as IconName} />
                   <span>{item.label}</span>
                 </a>
               </li>
             ))}
 
-            <li className="links-menu" ref={linksRef}>
+            <li className={styles.linksMenu} ref={linksRef}>
               <button
-                className="links-trigger"
+                className={styles.linksTrigger}
                 type="button"
                 aria-haspopup="menu"
                 aria-expanded={linksOpen}
                 onClick={() => setLinksOpen((open) => !open)}
               >
-                <Icon className="chevron-icon" name="chevron" />
+                <Icon className={styles.chevronIcon} name="chevron" />
                 <span>links</span>
               </button>
 
               {linksOpen && (
-                <ul className="links-dropdown" role="menu">
+                <ul className={styles.linksDropdown} role="menu">
                   {socialLinks.map(([name, href]) => (
                     <li key={name}>
-                      <a href={href} target="_blank" rel="noreferrer">
+                      <a
+                        className={styles.dropdownLink}
+                        href={href}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         {name}
                       </a>
                     </li>
@@ -68,7 +74,7 @@ function Header() {
         </nav>
 
         <button
-          className="theme-toggle"
+          className={styles.themeToggle}
           type="button"
           aria-label={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
           onClick={() => setDarkMode((isDark) => !isDark)}

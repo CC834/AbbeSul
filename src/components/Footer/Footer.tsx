@@ -1,8 +1,9 @@
-import { siteConfig } from '../config/site'
+import { siteConfig } from '../../config/site'
+import styles from './Footer.module.css'
 
 function Footer() {
   return (
-    <footer className="site-footer">
+    <footer className={styles.siteFooter}>
       <p>
         © {new Date().getFullYear()} {siteConfig.name}
       </p>
