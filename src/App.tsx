@@ -1,4 +1,3 @@
-import ContentSection from './components/ContentSection/ContentSection'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
@@ -13,7 +12,6 @@ function App() {
       <main>
         <Hero />
         <Projects />
-        <ContentSection id="cv" title="CV" />
         <Contact />
       </main>
 

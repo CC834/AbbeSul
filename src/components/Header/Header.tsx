@@ -7,6 +7,11 @@ const socialLinks = Object.entries(siteConfig.socials).filter(
   ([, href]) => href.length > 0,
 )
 
+const menuLinks = [
+  { name: 'cv', href: siteConfig.cv },
+  ...socialLinks.map(([name, href]) => ({ name, href })),
+].filter(({ href }) => href.length > 0)
+
 function Header() {
   const [darkMode, setDarkMode] = useState(false)
   const [linksOpen, setLinksOpen] = useState(false)
@@ -55,7 +60,7 @@ function Header() {
 
               {linksOpen && (
                 <ul className={styles.linksDropdown} role="menu">
-                  {socialLinks.map(([name, href]) => (
+                  {menuLinks.map(({ name, href }) => (
                     <li key={name}>
                       <a
                         className={styles.dropdownLink}

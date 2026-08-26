@@ -14,6 +14,8 @@ export const siteConfig = {
       'Have an opportunity, project, or idea in mind? Feel free to reach out by email or connect with me through the links below.',
   },
 
+  cv: 'https://www.overleaf.com/read/mztfnskxcgfh#520802',
+
   socials: {
     github: 'https://github.com/CC834',
     linkedin: 'https://www.linkedin.com/in/abbe-sulayman-041708239/',
@@ -21,7 +23,6 @@ export const siteConfig = {
 
   navigation: [
     { label: 'projects', href: '#projects', icon: 'folder' },
-    { label: 'cv', href: '#cv', icon: 'document' },
     { label: 'contact', href: '#contact', icon: 'message' },
   ],
 } as const
