@@ -102,4 +102,29 @@ export const projects: readonly Project[] = [
     },
     github: 'https://github.com/CC834/lidar-perception',
   },
+  {
+    id: 'personal-gym',
+    title: 'Personal Gym: Self-Hosted Workout Tracker',
+    description:
+      'A private, self-hosted workout app for building weekly programs, logging every set, tracking strength and body weight, and finding exercises through an interactive muscle map.',
+    impact:
+      'Designed, tested, and deployed as a real home-server service with a Node.js REST API, SQLite persistence, Tailscale authentication, responsive mobile workflows, and locally hosted exercise media.',
+    technologies: ['Node.js', 'JavaScript', 'SQLite', 'REST API', 'React', 'Automated Testing'],
+    accent: 'blue',
+    process: {
+      motivation:
+        'I built Personal Gym because I wanted one quiet, private place for my weekly plan, exercise guidance, set logging, progress, and body weight without advertisements or a cloud account.',
+      challenge:
+        'It needed to feel fast on a phone during a workout and remain useful on desktop, while protecting private data, handling workout state correctly, and serving licensed exercise media without a runtime dependency on an external API.',
+      approach:
+        'I built a Node.js HTTP and REST backend with a relational SQLite model, signed sessions, CSRF protection, and a Tailscale identity boundary. The responsive JavaScript interface uses a focused React island for interactive muscle selection and runs as a hardened systemd service.',
+      learned:
+        'Building software for my own repeated use made small workflow details, reliable state transitions, privacy boundaries, data portability, and deployment discipline just as important as the visible feature set.',
+    },
+    image: {
+      src: projectAsset('personal-gym.png'),
+      alt: 'Personal Gym exercise browser with search filters, selectable anatomy models, and an exercise catalog',
+    },
+    github: 'https://github.com/CC834/personal-gym',
+  },
 ]
