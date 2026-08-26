@@ -14,7 +14,7 @@ export const siteConfig = {
       'Have an opportunity, project, or idea in mind? Feel free to reach out by email or connect with me through the links below.',
   },
 
-  cv: 'https://www.overleaf.com/read/mztfnskxcgfh#520802',
+  cv: `${import.meta.env.BASE_URL}cv/abbe-sulayman-cv.pdf`,
 
   socials: {
     github: 'https://github.com/CC834',

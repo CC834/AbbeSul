@@ -3,6 +3,8 @@ name: Deploy portfolio to GitHub Pages
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: '30 */6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -29,6 +31,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Sync latest CV from Overleaf
+        run: bash scripts/sync-overleaf-cv.sh
 
       - name: Build portfolio
         run: npm run build -- --base=/AbbeSul/
