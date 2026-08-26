@@ -1,4 +1,7 @@
 :root {
+  --ui-size: 15px;
+
+  font-size: var(--ui-size);
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   color: #404040;
   background: #f8f8f8;

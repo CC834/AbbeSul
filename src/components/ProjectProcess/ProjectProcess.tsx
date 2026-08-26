@@ -3,12 +3,11 @@ import type { Project } from '../../config/projects'
 import styles from './ProjectProcess.module.css'
 
 type ProjectProcessProps = {
-  featured?: boolean
   id: string
   process: NonNullable<Project['process']>
 }
 
-function ProjectProcess({ featured = false, id, process }: ProjectProcessProps) {
+function ProjectProcess({ id, process }: ProjectProcessProps) {
   const [open, setOpen] = useState(false)
   const contentId = `${id}-content`
   const sections = [
@@ -20,16 +19,12 @@ function ProjectProcess({ featured = false, id, process }: ProjectProcessProps) 
     (section): section is { label: string; value: string } =>
       Boolean(section.value?.trim()),
   )
-  const className = [styles.process, featured ? styles.featured : '']
-    .filter(Boolean)
-    .join(' ')
-
   if (sections.length === 0) {
     return null
   }
 
   return (
-    <div className={className} data-open={open}>
+    <div className={styles.process} data-open={open}>
       <button
         className={styles.trigger}
         type="button"

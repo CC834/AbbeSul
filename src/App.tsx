@@ -1,4 +1,5 @@
 import ContentSection from './components/ContentSection/ContentSection'
+import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
@@ -13,7 +14,7 @@ function App() {
         <Hero />
         <Projects />
         <ContentSection id="cv" title="CV" />
-        <ContentSection id="contact" title="Contact" />
+        <Contact />
       </main>
 
       <Footer />

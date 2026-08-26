@@ -2,6 +2,8 @@
   --accent: #7b94a4;
   --accent-soft: #dcebef;
 
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 1rem;
@@ -30,39 +32,29 @@
   --accent-soft: #f1dadd;
 }
 
-.featured {
-  display: grid;
-  grid-column: 1 / -1;
-  grid-template-columns: minmax(0, 1.45fr) minmax(19rem, 0.85fr);
-}
-
 .preview {
-  min-height: 14rem;
+  position: relative;
+  min-height: 24rem;
   overflow: hidden;
-  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
   background: var(--accent-soft);
 }
 
-.featured .preview {
-  min-height: 24rem;
-  border-right: 1px solid var(--border);
-  border-bottom: 0;
-}
-
 .previewImage {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
-  min-height: inherit;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .previewFallback {
-  position: relative;
+  position: absolute;
+  inset: 0;
   display: grid;
   width: 100%;
   height: 100%;
-  min-height: inherit;
   align-content: end;
   padding: 1.5rem;
   color: #303330;
@@ -108,12 +100,13 @@
 
 .content {
   display: flex;
+  min-height: 24rem;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 1.35rem;
 }
 
 .eyebrow {
-  margin: 0 0 0.65rem;
+  margin: 0 0 0.5rem;
   color: var(--accent);
   font-size: 0.72rem;
   font-weight: 700;
@@ -122,7 +115,7 @@
 }
 
 .content h3 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.6rem;
   font-size: clamp(1.35rem, 2vw, 1.75rem);
   line-height: 1.1;
   letter-spacing: -0.045em;
@@ -137,7 +130,7 @@
 }
 
 .impact {
-  margin-top: 0.85rem;
+  margin-top: 0.7rem;
   padding-left: 0.8rem;
   border-left: 3px solid var(--accent);
 }
@@ -151,7 +144,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
-  margin: 1.35rem 0 0;
+  margin: 0.9rem 0 0;
   padding: 0;
   list-style: none;
 }
@@ -170,7 +163,7 @@
   flex-wrap: wrap;
   gap: 0.65rem;
   margin-top: auto;
-  padding-top: 1.35rem;
+  padding-top: 0.9rem;
 }
 
 .actions a {
@@ -195,16 +188,21 @@
 }
 
 @media (max-width: 800px) {
-  .featured {
+  .card {
     display: block;
   }
 
-  .featured .preview {
-    min-height: 16rem;
+  .preview {
+    height: 15rem;
+    min-height: 0;
     border-right: 0;
     border-bottom: 1px solid var(--border);
   }
 
+  .content {
+    height: auto;
+    min-height: 19rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

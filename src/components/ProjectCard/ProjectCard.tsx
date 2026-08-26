@@ -15,13 +15,7 @@ const accentClasses: Record<ProjectAccent, string> = {
 
 function ProjectCard({ index, project }: ProjectCardProps) {
   const hasActions = Boolean(project.caseStudy || project.github || project.demo)
-  const cardClassName = [
-    styles.card,
-    accentClasses[project.accent],
-    project.featured ? styles.featured : '',
-  ]
-    .filter(Boolean)
-    .join(' ')
+  const cardClassName = [styles.card, accentClasses[project.accent]].join(' ')
 
   return (
     <article className={cardClassName}>
@@ -91,7 +85,6 @@ function ProjectCard({ index, project }: ProjectCardProps) {
         <ProjectProcess
           id={`${project.id}-process`}
           process={project.process}
-          featured={project.featured}
         />
       )}
     </article>

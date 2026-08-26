@@ -2,11 +2,17 @@ export const siteConfig = {
   name: 'Abbe Sulayman',
   shortName: 'Abbe',
   email: 'Abbe20041@gmail.com',
-  title: 'fullstack developer',
+  title: 'Software Engineer',
   location: 'Stockholm, Sweden',
-  focus: 'frontend development',
+  focus: 'Data, AI, and backend systems',
+
   intro:
-    'I build responsive, accessible, and carefully designed web experiences.',
+    'I studied Computer Science and Engineering, with a focus on software development, machine learning, and data-driven systems. I enjoy building practical solutions to real-world problems.',
+  contact: {
+    heading: "Let's build something useful.",
+    description:
+      'Have an opportunity, project, or idea in mind? Feel free to reach out by email or connect with me through the links below.',
+  },
 
   socials: {
     github: 'https://github.com/CC834',

@@ -1,0 +1,157 @@
+.contact {
+  width: min(58rem, calc(100% - 3rem));
+  min-height: 72svh;
+  margin-inline: auto;
+  padding-block: 7rem;
+  border-top: 1px solid var(--border);
+  scroll-margin-top: 7rem;
+}
+
+.heading {
+  max-width: 44rem;
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow,
+.label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  margin: 0.45rem 0 1rem;
+  font-size: clamp(2.35rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.065em;
+}
+
+.intro {
+  max-width: 37rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(0.95rem, 1.5vw, 1.08rem);
+  line-height: 1.55;
+}
+
+.card {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: minmax(0, 1.35fr) minmax(15rem, 0.65fr);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  box-shadow: 7px 8px 0 var(--shadow);
+}
+
+.emailPanel,
+.socialPanel {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.emailPanel {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.email {
+  position: relative;
+  z-index: 0;
+  max-width: 100%;
+  margin: 0.8rem 0 2rem;
+  font-size: clamp(1rem, 2.1vw, 1.45rem);
+  overflow-wrap: anywhere;
+}
+
+.email::after {
+  position: absolute;
+  z-index: -1;
+  right: -0.1em;
+  bottom: 0.02em;
+  left: -0.1em;
+  height: 0.5em;
+  content: '';
+  border-radius: 0.1em;
+  background: var(--green);
+}
+
+.emailButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: auto;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.45rem;
+  background: var(--background);
+  box-shadow: 4px 5px 0 var(--shadow);
+  font-size: 0.82rem;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.emailButton:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 3px 0 var(--shadow);
+}
+
+.socialPanel {
+  border-left: 1px solid var(--border);
+  background: color-mix(in srgb, var(--green) 23%, var(--surface));
+}
+
+.socialLinks {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.socialLinks li + li {
+  border-top: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.85rem;
+  font-size: 0.88rem;
+  text-transform: capitalize;
+  transition: padding 140ms ease, opacity 140ms ease;
+}
+
+.socialLinks a:hover {
+  padding-left: 0.3rem;
+  opacity: 0.65;
+}
+
+@media (max-width: 650px) {
+  .contact {
+    min-height: auto;
+    padding-block: 5rem;
+  }
+
+  .heading {
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .socialPanel {
+    border-top: 1px solid var(--border);
+    border-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .emailButton,
+  .socialLinks a {
+    transition: none;
+  }
+}

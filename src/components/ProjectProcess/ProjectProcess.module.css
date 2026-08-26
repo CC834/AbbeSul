@@ -1,10 +1,7 @@
 .process {
+  grid-column: 1 / -1;
   margin: 0 1.5rem 1.5rem;
   border-top: 1px solid var(--border);
-}
-
-.featured {
-  grid-column: 1 / -1;
 }
 
 .trigger {
@@ -82,7 +79,7 @@
   transform: translateY(0);
 }
 
-.featured .content {
+.content {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -107,7 +104,7 @@
 }
 
 @media (max-width: 800px) {
-  .featured .content {
+  .content {
     grid-template-columns: 1fr;
   }
 }

@@ -27,66 +27,76 @@ export type Project = {
 
 export const projects: readonly Project[] = [
   {
-    id: 'warehouse-forecasting',
-    title: 'Warehouse Forecasting',
+    id: 'relational-lineage-explorer',
+    title: 'Database Relationship Explorer',
     description:
-      'A forecasting workspace that turns historical warehouse demand into clear planning signals.',
+      'A full-stack developer tool that connects to SQLite or PostgreSQL and visualizes how any record is linked to related data across an unfamiliar database.',
     impact:
-      'Designed to make staffing and capacity decisions easier to understand and act on.',
+      'Makes undocumented databases easier to investigate through read-only graph traversal, evidence-backed relationships, privacy redaction, and snapshot comparison.',
+    technologies: ['React', 'TypeScript', 'Python', 'FastAPI', 'SQL', 'PostgreSQL'],
+    accent: 'blue',
+    featured: true,
     process: {
       motivation:
-        'I started this project after seeing how difficult it can be to plan warehouse capacity from disconnected historical reports.',
+        'This project grew from database-investigation challenges I encountered while contributing to a collaborative industrial MSc thesis. I wanted to generalize that workflow without exposing any private schema or data.',
       challenge:
-        'The hardest part was turning noisy demand data into forecasts that remained useful and understandable to non-technical users.',
+        'Undocumented relationships can be incomplete or ambiguous, so inferred links must remain useful without being presented as proof. The tool also needed strict read-only and privacy boundaries.',
       approach:
-        'I separated the forecasting pipeline from the interface, then designed the dashboard around a few decisions instead of every available metric.',
+        'I combined bidirectional foreign-key traversal with opt-in same-column inference, explicit evidence labels, traversal budgets, secret-column redaction, and synthetic snapshot replay.',
       learned:
-        'A strong model is only valuable when people can understand its output and confidently use it in their daily planning.',
+        'Investigation tools are most trustworthy when uncertainty, safety limits, and evidence provenance are visible instead of hidden behind a polished graph.',
     },
-    technologies: ['Python', 'Pandas', 'Machine Learning', 'React'],
-    accent: 'green',
-    featured: true,
     image: {
-      src: '/projects/warehouse-dashboard.svg',
-      alt: 'Mock warehouse forecasting dashboard with a trend chart and summary panels',
+      src: '/projects/relational-lineage-explorer.png',
+      alt: 'Relational Lineage Explorer showing a synthetic database record graph and snapshot timeline',
     },
+    github: 'https://github.com/CC834/relational-lineage-explorer',
+    demo: 'https://cc834.github.io/relational-lineage-explorer/',
   },
   {
-    id: 'portfolio-system',
-    title: 'Portfolio System',
+    id: 'flowguard-opencl',
+    title: 'FlowGuard: Drone Collision Avoidance',
     description:
-      'A responsive personal site built around reusable components, typed content, and accessible interactions.',
-    technologies: ['React', 'TypeScript', 'CSS Modules', 'Vite'],
+      'A real-time drone collision-avoidance system that splits camera-image processing across the CPU and GPU so limited edge hardware can react before impact.',
+    impact:
+      'Implemented CPU-only, GPU-only, fixed-split, and adaptive OpenCL schedulers to measure how each strategy handles frame deadlines in repeatable Blender flights.',
+    technologies: ['C++17', 'Computer Vision', 'OpenCL', 'GPU Computing', 'OpenCV'],
     accent: 'pink',
     process: {
       motivation:
-        'I wanted one focused place to present my work without relying on a generic portfolio template.',
+        'I wanted to answer one question: can a drone infer an approaching collision from ordinary camera motion, react in time, and divide the work effectively across the limited CPU and GPU of an edge computer?',
       challenge:
-        'The main challenge was creating a distinct visual identity while keeping the code easy to extend as new projects are added.',
+        'The perception workload had to meet decision deadlines on constrained hardware without using simulator ground truth. GPU acceleration also carries transfer and synchronization costs, so simply moving every stage to the GPU was not a reliable solution.',
       approach:
-        'I built the interface from small typed components, centralized public information in configuration files, and kept styles scoped with CSS Modules.',
+        'I divided the C++ and OpenCL image pipeline into measurable stages, then compared CPU-only, GPU-only, fixed-split, and adaptive scheduling while the simulated drone used optical motion and time-to-collision risk to steer or brake.',
       learned:
-        'Simple interfaces still require careful decisions about spacing, hierarchy, accessibility, and how content will evolve over time.',
+        'Transfer, synchronization, and failure behavior matter as much as kernel speed; heterogeneous scheduling has to be measured honestly for the actual workload and device.',
     },
-    github: 'https://github.com/CC834/AbbeSul',
+    image: {
+      src: '/projects/flowguard-opencl.png',
+      alt: 'FlowGuard virtual-hardware simulation showing optical-flow vectors, detected obstacles, and throttling telemetry',
+    },
+    github: 'https://github.com/CC834/flowguard-opencl',
   },
   {
-    id: 'market-dashboard',
-    title: 'Market Analytics',
+    id: 'lidar-perception',
+    title: 'LiDAR Object Tracking & Classification',
     description:
-      'A real-time dashboard concept for exploring market activity, positions, and strategy performance.',
-    impact: 'Brings live signals and historical context into one focused interface.',
-    technologies: ['TypeScript', 'WebSockets', 'Data Visualization'],
-    accent: 'blue',
+      'A Python perception pipeline that turns raw scans from a low-cost LiDAR into detected and tracked objects, then tests whether their material can be classified without intensity data.',
+    impact:
+      'Built feature engineering, DBSCAN clustering, Kalman tracking, and random-forest evaluation; achieved 57.5% cross-distance accuracy versus a 33.4% baseline.',
+    technologies: ['Python', 'Machine Learning', 'scikit-learn', 'Data Analysis', 'Object Tracking'],
+    accent: 'green',
     process: {
       motivation:
-        'I wanted to explore how fast-moving market information could be presented without overwhelming the person using it.',
+        'I was curious whether a low-cost LiDAR without a return-intensity channel still contained enough indirect surface-response information to separate common materials.',
       challenge:
-        'Live updates, historical context, and strategy results all compete for attention and can quickly make a dashboard feel noisy.',
+        'The classifier could not use reflectivity or simply memorize target distance, and the small physical dataset required an evaluation design that exposed generalization limits.',
       approach:
-        'I grouped information by decision, prioritized the most time-sensitive signals, and treated secondary analytics as progressive detail.',
+        'I recorded three materials at three standoff distances, engineered robust return-rate and range-variation features, excluded median range, and used leave-one-distance-out validation.',
       learned:
-        'Real-time interfaces need a clear information hierarchy just as much as they need reliable data and low-latency updates.',
+        'The signal is promising but not conclusive: glass was distinctive, while cardboard and clothing often overlapped. More sessions, samples, and controlled conditions are necessary.',
     },
+    github: 'https://github.com/CC834/lidar-perception',
   },
 ]
