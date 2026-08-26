@@ -25,6 +25,9 @@ export type Project = {
   demo?: string
 }
 
+const projectAsset = (fileName: string) =>
+  `${import.meta.env.BASE_URL}projects/${fileName}`
+
 export const projects: readonly Project[] = [
   {
     id: 'relational-lineage-explorer',
@@ -47,7 +50,7 @@ export const projects: readonly Project[] = [
         'Investigation tools are most trustworthy when uncertainty, safety limits, and evidence provenance are visible instead of hidden behind a polished graph.',
     },
     image: {
-      src: '/projects/relational-lineage-explorer.png',
+      src: projectAsset('relational-lineage-explorer.png'),
       alt: 'Relational Lineage Explorer showing a synthetic database record graph and snapshot timeline',
     },
     github: 'https://github.com/CC834/relational-lineage-explorer',
@@ -73,7 +76,7 @@ export const projects: readonly Project[] = [
         'Transfer, synchronization, and failure behavior matter as much as kernel speed; heterogeneous scheduling has to be measured honestly for the actual workload and device.',
     },
     image: {
-      src: '/projects/flowguard-opencl.png',
+      src: projectAsset('flowguard-opencl.png'),
       alt: 'FlowGuard virtual-hardware simulation showing optical-flow vectors, detected obstacles, and throttling telemetry',
     },
     github: 'https://github.com/CC834/flowguard-opencl',
