@@ -123,7 +123,7 @@ export const projects: readonly Project[] = [
     },
     image: {
       src: projectAsset('personal-gym.png'),
-      alt: 'Personal Gym exercise browser with search filters, selectable anatomy models, and an exercise catalog',
+      alt: 'Personal Gym workout overview showing primary and supporting muscles on front-and-back anatomy models',
     },
     github: 'https://github.com/CC834/personal-gym',
   },
