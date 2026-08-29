@@ -76,8 +76,8 @@ export const projects: readonly Project[] = [
         'Transfer, synchronization, and failure behavior matter as much as kernel speed; heterogeneous scheduling has to be measured honestly for the actual workload and device.',
     },
     image: {
-      src: projectAsset('flowguard-opencl.png'),
-      alt: 'FlowGuard virtual-hardware simulation showing optical-flow vectors, detected obstacles, and throttling telemetry',
+      src: projectAsset('flowguard-opencl.webp'),
+      alt: 'FlowGuard frontal-wall simulation showing GPU frame rate, time to collision, and detected image features',
     },
     github: 'https://github.com/CC834/flowguard-opencl',
   },

@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Abbe Sulayman',
   shortName: 'Abbe',
-  email: 'Abbe20041@gmail.com',
+  email: 'sulaymanabbe@gmail.com',
   title: 'Software Engineer',
   location: 'Stockholm, Sweden',
   focus: 'Data, AI, and backend systems',
