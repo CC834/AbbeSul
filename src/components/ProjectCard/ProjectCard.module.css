@@ -1,6 +1,7 @@
 .card {
   --accent: #7b94a4;
   --accent-soft: #dcebef;
+  --project-body-height: 30rem;
 
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -34,7 +35,7 @@
 
 .preview {
   position: relative;
-  min-height: 24rem;
+  height: var(--project-body-height);
   overflow: hidden;
   border-right: 1px solid var(--border);
   background: var(--accent-soft);
@@ -100,7 +101,7 @@
 
 .content {
   display: flex;
-  min-height: 24rem;
+  height: var(--project-body-height);
   flex-direction: column;
   padding: 1.35rem;
 }
@@ -187,7 +188,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .card {
     display: block;
   }
@@ -201,7 +202,7 @@
 
   .content {
     height: auto;
-    min-height: 19rem;
+    min-height: 24rem;
   }
 }
 
